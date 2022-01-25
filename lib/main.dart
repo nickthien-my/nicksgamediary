@@ -24,8 +24,25 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Nick\'s Game Journal')),
-      body: Center(
-        child: Image.asset('assets/screenshots/DIRT5_20220124173840.png'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Recent Games'),
+          Text('2022'),
+          Card(
+
+
+            child: Column(
+              children: [
+                Text('Earned "Legendary" trophy.'),
+                Image.asset('assets/screenshots/Rayman Legends_20220123160500.png'),
+                Text('Win all trophies in the game!'),
+              ],
+            ),
+          )
+          
+        ],
+
       )
     );
   }
