@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'activityFeed.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Nick\'s Game Journal',
+      title: 'Activity Feed',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -22,26 +23,13 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Nick\'s Game Journal')),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Recent Games'),
-            Text('2022'),
-            Card(
-              child: Container(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
-                  children: [
-                    Text('Earned "Legendary" trophy.'),
-                    Image.asset(
-                        'assets/screenshots/Rayman Legends_20220123160500.png'),
-                    Text('Win all trophies in the game!'),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ));
+      appBar: AppBar(title: Text('Activity Feed')),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 0.0),
+        child: Center(
+          child: ActivityFeed(),
+          ),
+      ),
+    );
   }
 }
